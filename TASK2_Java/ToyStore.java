@@ -1,6 +1,9 @@
-import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Random;
 
@@ -41,11 +44,14 @@ public class ToyStore {
 
     private void writeToFile(String toyName) {
         try {
-            FileWriter writer = new FileWriter("prizes.txt", true);
+            FileOutputStream fos = new FileOutputStream("prizes.txt", true);
+            OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
+            BufferedWriter writer = new BufferedWriter(osw);
             writer.write(toyName + "\n");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    
 }
