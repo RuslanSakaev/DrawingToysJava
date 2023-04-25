@@ -18,9 +18,10 @@ public class ToyStore {
         for (Toy toy : toys) {
             if (toy.getId() == id) {
                 toy.setWeight(weight);
-                break;
+                return;
             }
         }
+        System.out.println("Toy with id " + id + " not found!");
     }
 
     public Toy getPrizeToy() {
