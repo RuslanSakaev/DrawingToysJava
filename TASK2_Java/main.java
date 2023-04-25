@@ -13,25 +13,21 @@ public class Main {
         store.addToy(new Toy(5, "Интерактивная игра", 7, 7));
         store.addToy(new Toy(6, "Конструктор", 10, 10));
         store.addToy(new Toy(7, "Домик", 8, 5));
-        store.addToy(new Toy(8, "Мягкая игрушка", 12, 15));
-        store.addToy(new Toy(9, "Настольная игра", 8, 7));
-        store.addToy(new Toy(10, "Игрушечное оружие", 4, 3));
+
 
         // изменение веса игрушек
-        store.updateToyWeight(1, 40);
-        store.updateToyWeight(2, 30);
-        store.updateToyWeight(3, 20);
-        store.updateToyWeight(4, 10);
-        store.updateToyWeight(5, 50);
-        store.updateToyWeight(6, 40);
-        store.updateToyWeight(7, 30);
-        store.updateToyWeight(8, 20);
-        store.updateToyWeight(9, 10);
-        store.updateToyWeight(10, 60);
+        store.updateToyWeight(1, 70);
+        store.updateToyWeight(2, 60);
+        store.updateToyWeight(3, 50);
+        store.updateToyWeight(4, 40);
+        store.updateToyWeight(5, 30);
+        store.updateToyWeight(6, 20);
+        store.updateToyWeight(7, 10);
+
 
         // организация розыгрыша и получение призовых игрушек
         List<Toy> prizeToys = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             Toy prizeToy = store.getPrizeToy();
             if (prizeToy != null) {
                 prizeToys.add(prizeToy);
